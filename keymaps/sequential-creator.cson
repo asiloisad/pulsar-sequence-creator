@@ -1,0 +1,6 @@
+'atom-text-editor':
+  'alt-0': 'sequential-creator:open'
+
+'.sequential-creator atom-text-editor':
+  'escape': 'sequential-creator:close'
+  'ctrl-c': 'sequential-creator:close'
