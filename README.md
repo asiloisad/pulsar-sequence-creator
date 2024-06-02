@@ -19,11 +19,15 @@ An Pulsar package, to inputs sequential numbers across multiple cursors.
 
 A project is a fork of [sequential-number](https://github.com/bacadra/sequential-number/issues). List of changes:
 - decaffeinated,
-- event-kit replaced by built-in event class,
-- repeat selecter added,
-- cursors are indexed in creation order,
+- replaced `event-kit` with built-in event class,
+- added `repeat` selector,
+- cursors are indexed by creation order by default,
+- optional flag `!` used to reorder cursors by position,
 - keyboard shortcut changed to `Alt-0`,
-- `SIMULATE_CURSOR_LENGTH` increased to 5.
+- `SIMULATE_CURSOR_LENGTH` changed to config option,
+- changed preview font to match editor font,
+- last sequence is not deleted, but selected,
+- changed algorithm of strings, it's easier to use now, but less powerful.
 
 ## Installation
 
@@ -32,145 +36,71 @@ To install `sequential-creator` search for [sequential-creator](https://web.puls
 ## Syntax Rules
 
 ```
-<start> <operator> <step> : <digit> : <radix> : <repeat>
+<start><operator><step><#radix><:padding><^repeat><flags>
 ```
 
 | Key | Default | Definition |
 | :- | :- | :- |
-| **start** | `""` | It specifies the number that you start typing an integer. |
-| **operator** <small>(optional)</small> | `+` | It specifies the generation rules of consecutive numbers in the `+` or `-`. The sign of the increment(`++`) and decrement(`--`) also available. |
-| **step** <small>(optional)</small> | `1` | It specifies the integer to be added or subtracted. |
-| **digit** <small>(optional)</small> | `0` | It specifies of the number of digits in the integer. |
-| **radix** <small>(optional)</small>   | `10` | It specifies an integer between 2 and 36 that represents radix. Or increment alphabetically by `"a"` or `"A"`. |
-| **repeat** <small>(optional)</small> | `2` | It specifies an index reapeat integer greter than 1. |
+| start | _mandatory_ | item that you start typing, e.g. `1`, `-1`, `+1`, `21`, `a`, `ac`, `aC` |
+| operator | `+` | operation to calculate next step value: `+` or `-` |
+| step | `1` | integer to be added or subtracted, e.g. `2`, `-2`, `+2` |
+| radix | 10 | The integer between 2 and 36 that represents radix |
+| padding | _empty_ | The padding command, e.g. `<2`, ` <2`, `0<2`, `a<2` |
+| repeat | 1 | An index repeat count as positive integer |
+| flags | _empty_ | A mix of letters:<br/>`!` reorder cursors by position<br/>`@` print plus sign if positive |
 
 #### Examples
 
 The following sample the cursor length is `5`.
 
 ```
-# Input
-=> 1
-=> 1++
-=> 1 + 1
+Input
+  => 1
+  => 1+
+  => 1+1
 
-# Output
-1
-2
-3
-4
-5
-```
+Output:
+  => 1, 2, 3, 4, 5
 
-```
-# Input
-=> 1/2
-=> 1++/2
-=> 1 + 1/2
+Input
+  => 1^2
+  => 1+^2
+  => 1+1^2
 
-# Output
-1
-1
-2
-2
-3
-```
+Output:
+  1, 1, 2, 2, 3
 
-```
-# Input
-=> 10 + 2
+Input
+  => 10+2
 
-# Output
-10
-12
-14
-16
-18
-```
+Output:
+  10, 12, 14, 16, 18
 
-```
-# Input
-=> 0027 + 3
+Input
+  => 0027+3
+  => 27+3:>4
+  => 27+3:0>4
 
-# Output
-0027
-0030
-0033
-0036
-0039
-```
+Output:
+  0027, 0030, 0033, 0036, 0039
 
-```
-# Input
-=> 010 - 1
-=> 010--
+Input
+  => a+2
 
-# Output
-010
-009
-008
-007
-006
-```
+Output:
+  a, c, e, g, i
 
-```
-# Input
-=> -10 + 1 : 2
+Input
+  => c+20
 
-# Output
--10
--09
--08
--07
--06
-```
+Output:
+  c, w, aq, bk, ce
 
-```
-# Input
-=> 0ff + 14 : 3 : 16
+Input
+  => c+20:a>3
 
-# Output
-0ff
-10d
-11b
-129
-137
-```
-
-```
-# Input
-=> 0AB239 + 2 : 6 : 16
-
-# Output
-0AB239
-0AB23B
-0AB23D
-0AB23F
-0AB241
-```
-
-```
-# Input
-=> a + 2 : 1 : a
-
-# Output
-a
-c
-e
-g
-i
-```
-
-```
-# Input
-=> c + 20 : 3 : a
-
-# Output
-aac
-aaw
-aaq
-abk
-ace
+Output:
+  aac, aaw, aaq, abk, ace
 ```
 
 # Contributing [🍺](https://www.buymeacoffee.com/asiloisad)

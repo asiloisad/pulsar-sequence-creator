@@ -2,5 +2,5 @@
   'alt-0': 'sequential-creator:open'
 
 '.sequential-creator atom-text-editor':
+  'enter': 'sequential-creator:done'
   'escape': 'sequential-creator:close'
-  'ctrl-c': 'sequential-creator:close'
