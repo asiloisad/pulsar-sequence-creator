@@ -1,21 +1,6 @@
 # sequence-creator
 
-<p align="center">
-  <a href="https://github.com/bacadra/pulsar-sequence-creator/tags">
-  <img src="https://img.shields.io/github/v/tag/bacadra/pulsar-sequence-creator?style=for-the-badge&label=Latest&color=blue" alt="Latest">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-sequence-creator/issues">
-  <img src="https://img.shields.io/github/issues-raw/bacadra/pulsar-sequence-creator?style=for-the-badge&color=blue" alt="OpenIssues">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-sequence-creator/blob/master/package.json">
-  <img src="https://img.shields.io/github/languages/top/bacadra/pulsar-sequence-creator?style=for-the-badge&color=blue" alt="Language">
-  </a>
-  <a href="https://github.com/bacadra/pulsar-sequence-creator/blob/master/LICENSE">
-  <img src="https://img.shields.io/github/license/bacadra/pulsar-sequence-creator?style=for-the-badge&color=blue" alt="Licence">
-  </a>
-</p>
-
-An Pulsar package, to inputs sequential numbers across multiple cursors.
+A Pulsar package, to inputs sequential numbers across multiple cursors.
 
 A project is a fork of [sequential-number](https://github.com/bacadra/sequential-number/issues). List of changes:
 - decaffeinated,
@@ -103,6 +88,6 @@ Output:
   aac, aaw, aaq, abk, ace
 ```
 
-# Contributing [🍺](https://www.buymeacoffee.com/asiloisad)
+# Contributing
 
 If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
