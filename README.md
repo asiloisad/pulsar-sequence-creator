@@ -22,6 +22,8 @@ To install `sequence-creator` search for [sequence-creator](https://web.pulsar-e
 
 In `atom-text-editor:not([mini])` there are available commands:
 
+- `sequence-creator:open`: open creator window
+
 
 ## Syntax Rules
 
