@@ -13,7 +13,7 @@
   "homepage": "https://github.com/bacadra/pulsar-sequence-creator",
   "url": "https://github.com/bacadra/pulsar-sequence-creator",
   "repository": "https://github.com/bacadra/pulsar-sequence-creator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "activationCommands": {
     "atom-text-editor:not([mini])": [
       "sequence-creator:open"
