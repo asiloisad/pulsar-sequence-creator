@@ -15,7 +15,9 @@
   "repository": "https://github.com/bacadra/pulsar-sequence-creator",
   "version": "0.0.1",
   "activationCommands": {
-    "atom-workspace": "sequence-creator:open"
+    "atom-text-editor:not([mini])": [
+      "sequence-creator:open"
+    ]
   },
   "license": "MIT"
 }

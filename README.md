@@ -1,22 +1,27 @@
 # sequence-creator
 
-A Pulsar package, to inputs sequential numbers across multiple cursors.
+Create sequence of numbers or chars in the across multiple cursors.
 
 A project is a fork of [sequential-number](https://github.com/bacadra/sequential-number/issues). List of changes:
 - decaffeinated,
 - replaced `event-kit` with built-in event class,
 - added `repeat` selector,
-- cursors are indexed by creation order by default,
-- optional flag `!` used to reorder cursors by position,
+- cursors are indexed by creation order instead of position,
+- optional flag `!` used to use cursor by position,
 - keyboard shortcut changed to `Alt-0`,
-- `SIMULATE_CURSOR_LENGTH` changed to config option,
+- `SIMULATE_CURSOR_LENGTH` changed to config option and increased by default,
 - changed preview font to match editor font,
-- last sequence is not deleted, but selected,
+- alphabet sequence can be customized,
 - changed algorithm of strings, it's easier to use now, but less powerful.
 
 ## Installation
 
 To install `sequence-creator` search for [sequence-creator](https://web.pulsar-edit.dev/packages/sequence-creator) in the Install pane of the Pulsar settings or run `ppm install sequence-creator`. Alternatively, you can run `ppm install bacadra/pulsar-sequence-creator` to install a package directly from the Github repository.
+
+## Commands
+
+In `atom-text-editor:not([mini])` there are available commands:
+
 
 ## Syntax Rules
 
@@ -90,4 +95,4 @@ Output:
 
 # Contributing
 
-If you have any ideas on how to improve the package, spot any bugs, or would like to support the development of new features, please feel free to share them via GitHub.
+Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback’s welcome!
