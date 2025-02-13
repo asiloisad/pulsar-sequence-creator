@@ -1,23 +1,21 @@
 {
+  "name": "sequence-creator",
   "description": "Create sequence of numbers or chars in the across multiple cursors",
+  "repository": "https://github.com/bacadra/pulsar-sequence-creator",
   "keywords": [
     "sequence",
     "creator",
     "number"
   ],
+  "version": "1.0.1",
+  "license": "MIT",
   "engines": {
     "atom": ">=1.100.0 <2.0.0"
   },
   "main": "./lib/main",
-  "name": "sequence-creator",
-  "homepage": "https://github.com/bacadra/pulsar-sequence-creator",
-  "url": "https://github.com/bacadra/pulsar-sequence-creator",
-  "repository": "https://github.com/bacadra/pulsar-sequence-creator",
-  "version": "1.0.1",
   "activationCommands": {
     "atom-text-editor:not([mini])": [
       "sequence-creator:open"
     ]
-  },
-  "license": "MIT"
+  }
 }
