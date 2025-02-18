@@ -2,7 +2,7 @@
 
 Create sequence of numbers or chars in the across multiple cursors.
 
-A project is a fork of [sequential-number](https://github.com/bacadra/sequential-number/issues). List of changes:
+A project is a fork of [sequential-number](https://github.com/asiloisad/sequential-number/issues). List of changes:
 - decaffeinated,
 - replaced `event-kit` with built-in event class,
 - added `repeat` selector,
@@ -16,7 +16,7 @@ A project is a fork of [sequential-number](https://github.com/bacadra/sequential
 
 ## Installation
 
-To install `sequence-creator` search for [sequence-creator](https://web.pulsar-edit.dev/packages/sequence-creator) in the Install pane of the Pulsar settings or run `ppm install sequence-creator`. Alternatively, you can run `ppm install bacadra/pulsar-sequence-creator` to install a package directly from the Github repository.
+To install `sequence-creator` search for [sequence-creator](https://web.pulsar-edit.dev/packages/sequence-creator) in the Install pane of the Pulsar settings or run `ppm install sequence-creator`. Alternatively, you can run `ppm install asiloisad/pulsar-sequence-creator` to install a package directly from the Github repository.
 
 ## Commands
 

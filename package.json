@@ -1,7 +1,7 @@
 {
   "name": "sequence-creator",
   "description": "Create sequence of numbers or chars in the across multiple cursors",
-  "repository": "https://github.com/bacadra/pulsar-sequence-creator",
+  "repository": "https://github.com/asiloisad/pulsar-sequence-creator",
   "keywords": [
     "sequence",
     "creator",
