@@ -17,5 +17,23 @@
     "atom-text-editor:not([mini])": [
       "sequence-creator:open"
     ]
+  },
+  "configSchema": {
+    "simulateCursorLength": {
+      "order": 1,
+      "title": "Simulate cursor length",
+      "description": "A count of items in simulation view.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 7
+    },
+    "alphabetSequence": {
+      "order": 2,
+      "title": "Alphabet sequence",
+      "description": "A series of letters used to generate a character sequence.",
+      "type": "string",
+      "default": "abcdefghijklmnopqrstuvwxyz"
+    }
   }
 }
