@@ -1,18 +1,16 @@
 # sequence-creator
 
-Create sequence of numbers or chars in the across multiple cursors.
+Generate sequences of numbers or characters across multiple cursors.
 
-A project is a fork of [sequential-number](https://github.com/asiloisad/sequential-number/issues). List of changes:
-- decaffeinated,
-- replaced `event-kit` with built-in event class,
-- added `repeat` selector,
-- cursors are indexed by creation order instead of position,
-- optional flag `!` used to use cursor by position,
-- keyboard shortcut changed to `Alt-0`,
-- `SIMULATE_CURSOR_LENGTH` changed to config option and increased by default,
-- changed preview font to match editor font,
-- alphabet sequence can be customized,
-- changed algorithm of strings, it's easier to use now, but less powerful.
+Fork of [sequential-number](https://github.com/asiloisad/sequential-number).
+
+## Features
+
+- **Number sequences**: Generate incrementing/decrementing numbers.
+- **Character sequences**: Generate alphabetic sequences (a, b, c...).
+- **Custom step**: Configure increment step and radix.
+- **Padding support**: Zero-pad or custom-pad output.
+- **Repeat option**: Repeat each value multiple times.
 
 ## Installation
 
@@ -20,19 +18,23 @@ To install `sequence-creator` search for [sequence-creator](https://web.pulsar-e
 
 ## Commands
 
-In `atom-text-editor:not([mini])` there are available commands:
+Commands available in `atom-text-editor:not([mini])`:
 
-- `sequence-creator:open`: open creator window
+- `sequence-creator:open`: (`Alt+0`) open creator window.
 
+Commands available in `.sequence-creator`:
 
-## Syntax Rules
+- `sequence-creator:done`: (`Enter`) apply sequence,
+- `sequence-creator:close`: (`Escape`) close creator window.
+
+## Syntax rules
 
 ```
 <start><operator><step><#radix><:padding><^repeat><flags>
 ```
 
 | Key | Default | Definition |
-| :- | :- | :- |
+| --- | --- | --- |
 | start | _mandatory_ | item that you start typing, e.g. `1`, `-1`, `+1`, `21`, `a`, `ac`, `aC` |
 | operator | `+` | operation to calculate next step value: `+` or `-` |
 | step | `1` | integer to be added or subtracted, e.g. `2`, `-2`, `+2` |
@@ -95,6 +97,6 @@ Output:
   aac, aaw, aaq, abk, ace
 ```
 
-# Contributing
+## Contributing
 
-Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback’s welcome!
+Got ideas to make this package better, found a bug, or want to help add new features? Just drop your thoughts on GitHub — any feedback's welcome!
