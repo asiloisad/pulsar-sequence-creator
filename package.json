@@ -1,6 +1,6 @@
 {
   "name": "sequence-creator",
-  "description": "Create sequence of numbers or chars in the across multiple cursors",
+  "description": "Generate sequences of numbers or characters across multiple cursors",
   "repository": "https://github.com/asiloisad/pulsar-sequence-creator",
   "keywords": [
     "sequence",
