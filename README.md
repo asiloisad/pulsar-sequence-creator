@@ -20,12 +20,12 @@ To install `sequence-creator` search for [sequence-creator](https://web.pulsar-e
 
 Commands available in `atom-text-editor:not([mini])`:
 
-- `sequence-creator:open`: <kbd>Alt+0</kbd> open creator window.
+- `sequence-creator:open`: open creator window.
 
 Commands available in `.sequence-creator`:
 
-- `sequence-creator:done`: <kbd>Enter</kbd> apply sequence,
-- `sequence-creator:close`: <kbd>Escape</kbd> close creator window.
+- `sequence-creator:done`: apply sequence,
+- `sequence-creator:close`: close creator window.
 
 ## Syntax rules
 
