@@ -1,6 +1,2 @@
 'atom-text-editor:not([mini])':
   'alt-0': 'sequence-creator:open'
-
-'.sequence-creator atom-text-editor':
-  'enter': 'sequence-creator:done'
-  'escape': 'sequence-creator:close'
