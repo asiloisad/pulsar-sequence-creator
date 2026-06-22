@@ -21,8 +21,8 @@
   "configSchema": {
     "simulateCursorLength": {
       "order": 1,
-      "title": "Simulate cursor length",
-      "description": "A count of items in simulation view.",
+      "title": "Maximum preview items",
+      "description": "The maximum count of cursor items shown in the preview.",
       "type": "integer",
       "minimum": 1,
       "maximum": 20,
